@@ -17,6 +17,12 @@ class _FishListState extends State<FishList> {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index){
           return GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/selectedFish' , arguments: {
+                  'selectedFish': fish[index],
+                }
+              );
+            },
             child: Card(
               child: Center(
                 child: Column(
