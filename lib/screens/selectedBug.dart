@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SelectedFish extends StatefulWidget {
+class SelectedBug extends StatefulWidget {
   @override
-  _SelectedFishState createState() => _SelectedFishState();
+  _SelectedBugState createState() => _SelectedBugState();
 }
 
-class _SelectedFishState extends State<SelectedFish> {
-  Map fish = {};
+class _SelectedBugState extends State<SelectedBug> {
+  Map bug = {};
   @override
   Widget build(BuildContext context) {
-    fish = ModalRoute.of(context).settings.arguments;
+    bug =  ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text('Back'),
@@ -23,8 +23,8 @@ class _SelectedFishState extends State<SelectedFish> {
               Card(
                 child: Column(
                   children: [
-                    Image.network(fish['selectedFish']['Icon Image']),
-                    Text(fish['selectedFish']['Name']),
+                    Image.network(bug['selectedBug']['Icon Image']),
+                    Text(bug['selectedBug']['Name']),
                   ],
                 ),
               ),
@@ -37,7 +37,7 @@ class _SelectedFishState extends State<SelectedFish> {
                         Text('Price'),
                         Row(
                           children: [
-                            Text(fish['selectedFish']['Sell'].toString()),
+                            Text(bug['selectedBug']['Sell'].toString()),
                             Image.asset('assets/bellpouch.png' , width: 40.0, height: 40.0,),
                           ],
                         ),
@@ -48,7 +48,7 @@ class _SelectedFishState extends State<SelectedFish> {
                     child: Column(
                       children: [
                         Text('Location'),
-                        Text(fish['selectedFish']['Where']['How'])
+                        Text(bug['selectedBug']['Where']['How'])
                       ],
                     ),
                   )
@@ -60,16 +60,16 @@ class _SelectedFishState extends State<SelectedFish> {
                     Card(
                       child: Column(
                         children: [
-                          Text('Shadow Size'),
-                          Text(fish['selectedFish']['Shadow']),
+                          Text('Weather'),
+                          Text(bug['selectedBug']['Weather']),
                         ],
                       ),
                     ),
                     Card(
                       child: Column(
                         children: [
-                          Text('Catch Difficulty'),
-                          Text(fish['selectedFish']['Catch Difficulty']),
+                          Text('Total Catches \n to Unlock'),
+                          Text(bug['selectedBug']['Total Catches to Unlock'].toString()),
                         ],
                       ),
                     )

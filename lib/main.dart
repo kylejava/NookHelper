@@ -3,6 +3,7 @@ import 'package:nookhelper/screens/bugList.dart';
 import 'package:nookhelper/screens/fishList.dart';
 import 'package:nookhelper/screens/seaCritterList.dart';
 import 'package:nookhelper/screens/selectedFish.dart';
+import 'package:nookhelper/screens/selectedBug.dart';
 import 'package:nookhelper/screens/index.dart';
 void main() {
   runApp(MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/bugList': (context) => BugList(),
         '/fishList': (context) => FishList(),
         '/selectedFish':(context) =>SelectedFish(),
+        '/selectedBug':(context) =>SelectedBug(),
         '/seaCritterList': (context) => SeaCritterList()
       },
     );

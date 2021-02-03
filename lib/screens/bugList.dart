@@ -20,6 +20,12 @@ class _BugListState extends State<BugList> {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           itemBuilder: (BuildContext context, int index){
             return GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, '/selectedBug' , arguments: {
+                  'selectedBug': insects[index],
+                }
+                );
+              },
               child: Card(
                 child: Center(
                   child: Column(
