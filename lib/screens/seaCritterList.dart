@@ -18,6 +18,12 @@ class _SeaCritterListState extends State<SeaCritterList> {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index){
           return GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/selectedCritter' , arguments: {
+                'selectedCritter': seaCreatures[index],
+              }
+              );
+            },
             child: Card(
               child: Center(
                 child: Column(
