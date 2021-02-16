@@ -48,7 +48,7 @@ class _SelectedCritterState extends State<SelectedCritter> {
                     child: Column(
                       children: [
                         Text('Shadow'),
-                        Text(critter['selectedCritter']['Shadow'])
+                        Text(critter['selectedCritter']['Shadow'].toUpperCase())
                       ],
                     ),
                   )

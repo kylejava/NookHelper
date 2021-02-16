@@ -50,6 +50,7 @@ flutter:
       - assets/butterflynet.png
       - assets/mask.png
       - assets/fishingrod.png
+      - assets/bg.png
     # - insects.json
      #- seaCreatures.json
 

@@ -14,9 +14,14 @@ class _BugListState extends State<BugList> {
     return Scaffold(
       appBar: AppBar(
         title: Text('List Of Bugs'),
+        backgroundColor:  Colors.green[300],
       ),
-      body: GridView.builder(
-        itemCount: insects.length,
+      body: Container(
+        decoration:  new BoxDecoration(
+          image: new DecorationImage(image: new AssetImage("assets/bg.png"), fit: BoxFit.cover,),
+        ),
+        child: GridView.builder(
+          itemCount: insects.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           itemBuilder: (BuildContext context, int index){
             return GestureDetector(
@@ -38,6 +43,7 @@ class _BugListState extends State<BugList> {
               ),
             );
           },
+        ),
       ),
     );
   }
