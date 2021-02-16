@@ -10,28 +10,49 @@ class Index extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('NookHelper'),
-              FlatButton.icon(
+              Text('NookHelper' , style: TextStyle(fontSize: 30.0),),
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.green[300])
+                ),
+                color: Colors.green[300],
                 onPressed: (){
                   Navigator.pushNamed(context, '/fishList');
                 },
-                icon: Icon(Icons.arrow_forward),
-                label: Text('Fish'),
+                child: Text(
+                  'Fish',
+                  style: TextStyle(color: Colors.white, fontSize: 30.0),
+                ),
               ),
-              FlatButton.icon(
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.green[300])
+                ),
+                color: Colors.green[300],
                 onPressed: (){
                   Navigator.pushNamed(context, '/bugList');
                 },
-                icon: Icon(Icons.arrow_forward),
-                label: Text('Insects'),
+                child: Text(
+                  'Insects',
+                  style: TextStyle(color: Colors.white, fontSize: 30.0),
+                ),
               ),
-              FlatButton.icon(
+              FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.green[300])
+                ),
+                color: Colors.green[300],
                 onPressed: (){
                   Navigator.pushNamed(context, '/seaCritterList');
                 },
-                icon: Icon(Icons.arrow_forward),
-                label: Text('Sea Critters'),
-              )
+                child: Text(
+                  'Sea Critters',
+                  style: TextStyle(color: Colors.white, fontSize: 30.0),
+                ),
+              ),
             ],
           ),
         ),
