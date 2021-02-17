@@ -32,6 +32,7 @@ class _BugListState extends State<BugList> {
                 );
               },
               child: Card(
+                color: Colors.green[300],
                 child: Center(
                   child: Column(
                     children: [

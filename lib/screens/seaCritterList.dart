@@ -30,6 +30,7 @@ class _SeaCritterListState extends State<SeaCritterList> {
                 );
               },
               child: Card(
+
                 child: Center(
                   child: Column(
                     children: [

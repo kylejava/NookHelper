@@ -29,6 +29,7 @@ class _FishListState extends State<FishList> {
                 );
               },
               child: Card(
+                color: Colors.green[300],
                 child: Center(
                   child: Column(
                     children: [

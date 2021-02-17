@@ -66,6 +66,7 @@ class _SelectedBugState extends State<SelectedBug> {
                       ),
                     ),
                     Card(
+
                       child: Column(
                         children: [
                           Text('Total Catches \n to Unlock'),
