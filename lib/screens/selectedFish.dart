@@ -14,9 +14,12 @@ class _SelectedFishState extends State<SelectedFish> {
       appBar: AppBar(
         title: Text('Back'),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(15.0),
-        child: Center(
+      body: Container(
+        decoration:  new BoxDecoration(
+          image: new DecorationImage(image: new AssetImage("assets/bg.png"), fit: BoxFit.cover,),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -24,7 +27,10 @@ class _SelectedFishState extends State<SelectedFish> {
                 child: Column(
                   children: [
                     Image.network(fish['selectedFish']['Icon Image']),
-                    Text(fish['selectedFish']['Name']),
+                    Text(
+                      fish['selectedFish']['Name'],
+                      style: TextStyle(fontSize: 40.0),
+                    ),
                   ],
                 ),
               ),
@@ -34,11 +40,18 @@ class _SelectedFishState extends State<SelectedFish> {
                   Card(
                     child: Column(
                       children: [
-                        Text('Price'),
+                        Text(
+                          'Price',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
                         Row(
                           children: [
-                            Text(fish['selectedFish']['Sell'].toString()),
-                            Image.asset('assets/bellpouch.png' , width: 40.0, height: 40.0,),
+                            Text(
+                              fish['selectedFish']['Sell'].toString(),
+                              style: TextStyle(fontSize: 25.0),
+
+                            ),
+                            Image.asset('assets/bellpouch.png' , width: 50.0, height: 50.0,),
                           ],
                         ),
                       ],
@@ -47,8 +60,14 @@ class _SelectedFishState extends State<SelectedFish> {
                   Card(
                     child: Column(
                       children: [
-                        Text('Location'),
-                        Text(fish['selectedFish']['Where']['How'])
+                        Text(
+                          'Location',
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                        Text(
+                          fish['selectedFish']['Where']['How'],
+                          style: TextStyle(fontSize: 25.0),
+                        )
                       ],
                     ),
                   )
@@ -60,16 +79,28 @@ class _SelectedFishState extends State<SelectedFish> {
                     Card(
                       child: Column(
                         children: [
-                          Text('Shadow Size'),
-                          Text(fish['selectedFish']['Shadow']),
+                          Text(
+                            'Shadow \nSize',
+                            style: TextStyle(fontSize: 25.0),
+                          ),
+                          Text(
+                            fish['selectedFish']['Shadow'],
+                            style: TextStyle(fontSize: 25.0),
+                          ),
                         ],
                       ),
                     ),
                     Card(
                       child: Column(
                         children: [
-                          Text('Catch Difficulty'),
-                          Text(fish['selectedFish']['Catch Difficulty']),
+                          Text(
+                            'Catch \nDifficulty',
+                            style: TextStyle(fontSize: 25.0),
+                          ),
+                          Text(
+                            fish['selectedFish']['Catch Difficulty'],
+                            style: TextStyle(fontSize: 25.0),
+                          ),
                         ],
                       ),
                     )

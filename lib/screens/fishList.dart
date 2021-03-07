@@ -25,7 +25,7 @@ class _FishListState extends State<FishList> {
               onTap: (){
                 Navigator.pushNamed(context, '/selectedFish' , arguments: {
                   'selectedFish': fish[index],
-                }
+                  }
                 );
               },
               child: Card(
@@ -34,7 +34,7 @@ class _FishListState extends State<FishList> {
                   child: Column(
                     children: [
                       Image.network(fish[index]['Icon Image']),
-                      Text(fish[index]['Name']),
+                      Text(fish[index]['Name'] , style:  TextStyle(fontSize: 19.0),),
                     ],
                   ),
                 ),
