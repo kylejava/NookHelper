@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:nookhelper/screens/bugList.dart';
 import 'package:nookhelper/screens/fishList.dart';
 import 'package:nookhelper/screens/seaCritterList.dart';
-import 'package:nookhelper/screens/selectedCritter.dart';
-import 'package:nookhelper/screens/selectedFish.dart';
-import 'package:nookhelper/screens/selectedBug.dart';
+import 'file:///C:/Users/Kyle/Desktop/code/NookHelper/nookhelper/lib/screens/unused_screens/selectedCritter.dart';
+import 'file:///C:/Users/Kyle/Desktop/code/NookHelper/nookhelper/lib/screens/unused_screens/selectedFish.dart';
+import 'file:///C:/Users/Kyle/Desktop/code/NookHelper/nookhelper/lib/screens/unused_screens/selectedBug.dart';
 import 'package:nookhelper/screens/index.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -21,9 +22,6 @@ class MyApp extends StatelessWidget {
         '/index': (context) => Index(),
         '/bugList': (context) => BugList(),
         '/fishList': (context) => FishList(),
-        '/selectedFish':(context) =>SelectedFish(),
-        '/selectedBug':(context) =>SelectedBug(),
-        '/selectedCritter':(context) =>SelectedCritter(),
         '/seaCritterList': (context) => SeaCritterList()
       },
     );
